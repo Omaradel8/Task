@@ -25,12 +25,10 @@ struct RecipesResultModel: Codable {
     }
 }
 
-// MARK: - Hit
 struct Hit: Codable {
     var recipe: Recipe?
 }
 
-// MARK: - Recipe
 struct Recipe: Codable {
     var uri: String?
     var label: String?
@@ -40,7 +38,7 @@ struct Recipe: Codable {
     var shareAs: String?
     var yield: Int?
     var dietLabels, healthLabels: [String]?
-    var cautions: [Caution]?
+    var cautions: [String]?
     var ingredientLines: [String]?
     var ingredients: [Ingredient]?
     var calories, totalWeight: Double?
@@ -50,12 +48,6 @@ struct Recipe: Codable {
     var digest: [Digest]?
 }
 
-enum Caution: String, Codable {
-    case fodmap = "FODMAP"
-    case sulfites = "Sulfites"
-}
-
-// MARK: - Digest
 struct Digest: Codable {
     var label, tag: String?
     var schemaOrgTag: String?
@@ -66,7 +58,6 @@ struct Digest: Codable {
     var sub: [Digest]?
 }
 
-// MARK: - Ingredient
 struct Ingredient: Codable {
     var text: String?
     var weight: Double?
@@ -85,4 +76,10 @@ struct Total: Codable {
     var label: String?
     var quantity: Double?
     var unit: String?
+}
+
+
+enum TypeOfView {
+    case history
+    case newResult
 }

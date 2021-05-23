@@ -25,6 +25,7 @@
 		0428DCF4265A972B0097F66B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428DCF3265A972B0097F66B /* HomeViewController.swift */; };
 		0428DCF9265A99160097F66B /* RecipesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428DCF8265A99160097F66B /* RecipesModel.swift */; };
 		0428DCFC265A99E90097F66B /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428DCFB265A99E90097F66B /* URLs.swift */; };
+		0428DCFF265AA5E50097F66B /* Home+TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428DCFE265AA5E50097F66B /* Home+TableDelegate.swift */; };
 		044EBD652659AAF6004C0130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EBD642659AAF6004C0130 /* AppDelegate.swift */; };
 		044EBD672659AAF6004C0130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EBD662659AAF6004C0130 /* SceneDelegate.swift */; };
 		044EBD692659AAF6004C0130 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EBD682659AAF6004C0130 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		0428DCF3265A972B0097F66B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0428DCF8265A99160097F66B /* RecipesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesModel.swift; sourceTree = "<group>"; };
 		0428DCFB265A99E90097F66B /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		0428DCFE265AA5E50097F66B /* Home+TableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+TableDelegate.swift"; sourceTree = "<group>"; };
 		044EBD612659AAF6004C0130 /* iOSTaskForFoodRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTaskForFoodRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044EBD642659AAF6004C0130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044EBD662659AAF6004C0130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				0428DCF7265A99070097F66B /* Model */,
 				0428DCE9265A94850097F66B /* TableCell */,
 				0428DCF3265A972B0097F66B /* HomeViewController.swift */,
+				0428DCFE265AA5E50097F66B /* Home+TableDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			files = (
 				0428DCE0265A8C7A0097F66B /* FoodLandAlertVC.swift in Sources */,
 				0428DCF9265A99160097F66B /* RecipesModel.swift in Sources */,
+				0428DCFF265AA5E50097F66B /* Home+TableDelegate.swift in Sources */,
 				0428DCDB265A8C7A0097F66B /* View.swift in Sources */,
 				0428DCDE265A8C7A0097F66B /* UIView+Ext.swift in Sources */,
 				044EBD692659AAF6004C0130 /* ViewController.swift in Sources */,
