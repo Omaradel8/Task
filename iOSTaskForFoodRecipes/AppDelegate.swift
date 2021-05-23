@@ -7,6 +7,9 @@
 
 import UIKit
 
+var app_id = "57ad18c1"
+var app_key = "c7a5ef4dceaecdc2c8314adec8444239"
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

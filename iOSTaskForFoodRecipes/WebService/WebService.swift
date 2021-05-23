@@ -19,9 +19,12 @@ struct Resource<T: Codable> {
 
 class WebService {
     
-    func load<T>(resource: Resource<T>, completion: @escaping (Result<T, NetworkError>) -> Void) {
+    func load<T: Codable>(url: String, parameters: [URLQueryItem], completion: @escaping (Result<T, NetworkError>) -> Void) {
         
-        URLSession.shared.dataTask(with: resource.url) { data, _, error in
+        var urlComponants = URLComponents(string: url)
+        urlComponants?.queryItems = parameters
+        
+        URLSession.shared.dataTask(with: URLRequest(url: (urlComponants?.url)!)) { data, _, error in
             guard data == data , error == nil else {
                 completion(.failure(.domainError))
                 return
