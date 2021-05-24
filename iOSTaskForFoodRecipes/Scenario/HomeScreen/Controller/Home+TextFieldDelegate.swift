@@ -30,6 +30,7 @@ extension HomeViewController: UITextFieldDelegate {
         }else{
             tableView.isHidden = true
             searchView.isHidden = false
+            searchMessage.text = "Find Your Recipe"
             self.searchHistory = nil
             self.recipesResult = nil
             self.fromItemNumber = 0
@@ -41,7 +42,6 @@ extension HomeViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         getRecipes(q: textField.text ?? "")
         textField.resignFirstResponder()
-        CoreDataManager.instance.saveNewItem(title: searchTextField.text ?? "")
         return true
     }
 }

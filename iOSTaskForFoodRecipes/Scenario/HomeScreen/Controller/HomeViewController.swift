@@ -31,6 +31,7 @@ class HomeViewController: UIViewController {
             if searchHistory?.count == 0 {
                 tableView.isHidden = true
                 searchView.isHidden = false
+                searchMessage.text = "No Result Found"
             }else{
                 tableView.isHidden = false
                 searchView.isHidden = true
@@ -58,7 +59,16 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationItem.title = "Search For Recipe"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationItem.title = ""
     }
 }
 

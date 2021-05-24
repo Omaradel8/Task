@@ -49,23 +49,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.isHidden = true
             getRecipes(q: searchTextField.text ?? "")
         }else{
-            
+            let vc = AppStoryboard.RecipeDetails.viewController(viewControllerClass: RecipeDetailsViewController.self)
+            vc.recipeDetails = self.recipesResult?.hits?[indexPath.row].recipe
+            self.navigationController?.pushViewController(vc, animated: true)
         }
-    }
-}
-
-
-extension UITableView {
-    func startSpinnerIndicator() {
-            let spinner = UIActivityIndicatorView(style: .gray)
-            spinner.startAnimating()
-            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: self.bounds.width, height: CGFloat(44))
-            self.tableFooterView = spinner
-            self.tableFooterView?.isHidden = false
-    }
-    
-    func stopSpinner() {
-        self.tableFooterView = nil
-        self.tableFooterView?.isHidden = true
     }
 }

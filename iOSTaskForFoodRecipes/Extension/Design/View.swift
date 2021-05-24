@@ -249,8 +249,8 @@ extension UIColor {
 
 extension UIViewController{
     
-    func presentFreshFeelsAlert(message : String, grayButtonTitle : String, secondButtonTitle : String, alertImage: UIImage, needSecondButton: Bool, first: @escaping (()->()), second: @escaping (()->()))  {
-        let alerVC = FoodLandAlertVC(message: message, firstButtonTitle: grayButtonTitle, secondButtonTitle: secondButtonTitle, image: alertImage, needSecondButton: needSecondButton , first: first, second: second)
+    func presentAlert(message : String, grayButtonTitle : String, secondButtonTitle : String, alertImage: UIImage, needSecondButton: Bool, first: @escaping (()->()), second: @escaping (()->()))  {
+        let alerVC = AlertVC(message: message, firstButtonTitle: grayButtonTitle, secondButtonTitle: secondButtonTitle, image: alertImage, needSecondButton: needSecondButton , first: first, second: second)
         alerVC.modalPresentationStyle = .overFullScreen
         alerVC.modalTransitionStyle = .crossDissolve
         self.present(alerVC,animated: true)
@@ -289,5 +289,20 @@ extension UIImageView {
                 }
             }
         }
+    }
+}
+
+extension UITableView {
+    func startSpinnerIndicator() {
+            let spinner = UIActivityIndicatorView(style: .gray)
+            spinner.startAnimating()
+            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: self.bounds.width, height: CGFloat(44))
+            self.tableFooterView = spinner
+            self.tableFooterView?.isHidden = false
+    }
+    
+    func stopSpinner() {
+        self.tableFooterView = nil
+        self.tableFooterView?.isHidden = true
     }
 }

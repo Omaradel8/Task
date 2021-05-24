@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodLandAlertVC: UIViewController {
+class AlertVC: UIViewController {
     let containerView   = FoodLandAlertContainerView()
     let alertImage      = UIImageView()
     let messageLabel    = FoodLandBodyLabel(textAlignment: .center)
