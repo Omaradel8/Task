@@ -28,9 +28,44 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == ((recipesResult?.count ?? 0) - 1), requestMore{
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offsetY       = scrollView.contentOffset.y        //how you scrolled up and down
+        let contentHeight = scrollView.contentSize.height     // entire scrollview
+        let height        = scrollView.frame.size.height      //height of your screen
+        
+        if offsetY > contentHeight - (height + 250) {
+            if requestMore{
+                fromItemNumber += 10
+                self.tableView.startSpinnerIndicator()
+                getRecipes(q: self.searchTextField.text ?? "")
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if typeOfView == TypeOfView.history {
+            searchTextField.text = searchHistory?[indexPath.row].title
+            searchTextField.endEditing(true)
+            tableView.isHidden = true
+            getRecipes(q: searchTextField.text ?? "")
+        }else{
             
         }
+    }
+}
+
+
+extension UITableView {
+    func startSpinnerIndicator() {
+            let spinner = UIActivityIndicatorView(style: .gray)
+            spinner.startAnimating()
+            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: self.bounds.width, height: CGFloat(44))
+            self.tableFooterView = spinner
+            self.tableFooterView?.isHidden = false
+    }
+    
+    func stopSpinner() {
+        self.tableFooterView = nil
+        self.tableFooterView?.isHidden = true
     }
 }

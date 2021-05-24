@@ -16,12 +16,38 @@ class HomeViewController: UIViewController {
             tableView.dataSource = self
         }
     }
-    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchTextField: UITextField!{
+        didSet{
+            searchTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+            searchTextField.delegate = self
+            searchTextField.returnKeyType = .search
+        }
+    }
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchMessage: UILabel!
     
-    var searchHistory: [RecipeHistory]?
-    var recipesResult: RecipesResultModel?
+    var searchHistory: [RecipeHistory]?{
+        didSet{
+            if searchHistory?.count == 0 {
+                tableView.isHidden = true
+                searchView.isHidden = false
+            }else{
+                tableView.isHidden = false
+                searchView.isHidden = true
+            }
+        }
+    }
+    var recipesResult: RecipesResultModel?{
+        didSet{
+            if recipesResult?.hits?.count == 0 {
+                tableView.isHidden = true
+                searchView.isHidden = false
+            }else{
+                tableView.isHidden = false
+                searchView.isHidden = true
+            }
+        }
+    }
     
     var fromItemNumber = 0
     var requestMore: Bool {
@@ -32,6 +58,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Search For Recipe"
     }
 }
 

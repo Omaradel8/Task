@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KwE-HM-RTx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tSt-J6-nYt">
-                                <rect key="frame" x="30" y="44" width="354" height="40"/>
+                                <rect key="frame" x="30" y="150" width="354" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search2" translatesAutoresizingMaskIntoConstraints="NO" id="NcB-OZ-6as">
                                         <rect key="frame" x="10" y="10" width="20" height="20"/>
@@ -51,7 +51,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fe3-CN-Lt8">
-                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <rect key="frame" x="0.0" y="200" width="414" height="662"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoryCell" id="ap3-NU-Am1" customClass="HistoryCell" customModule="iOSTaskForFoodRecipes" customModuleProvider="target">
@@ -98,7 +98,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvf-Yo-Evc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvf-Yo-Evc">
                                                     <rect key="frame" x="100" y="15" width="304" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -143,7 +143,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Knu-AI-Rmn">
-                                <rect key="frame" x="50" y="313" width="314" height="270.5"/>
+                                <rect key="frame" x="50" y="312.5" width="314" height="271"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="find your recipes-1" translatesAutoresizingMaskIntoConstraints="NO" id="hox-cR-RDd">
                                         <rect key="frame" x="30" y="30" width="254" height="170"/>
@@ -151,8 +151,8 @@
                                             <constraint firstAttribute="height" constant="170" id="eGR-4j-e2t"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTq-uD-Pd5">
-                                        <rect key="frame" x="20" y="225" width="274" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Your Recipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTq-uD-Pd5">
+                                        <rect key="frame" x="20" y="225" width="274" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -181,11 +181,12 @@
                             <constraint firstItem="j0O-Ty-sKi" firstAttribute="trailing" secondItem="fe3-CN-Lt8" secondAttribute="trailing" id="CmH-c9-kif"/>
                             <constraint firstItem="j0O-Ty-sKi" firstAttribute="trailing" secondItem="Knu-AI-Rmn" secondAttribute="trailing" constant="50" id="Fk8-vR-wiU"/>
                             <constraint firstItem="fe3-CN-Lt8" firstAttribute="leading" secondItem="j0O-Ty-sKi" secondAttribute="leading" id="MI0-oG-J2a"/>
-                            <constraint firstItem="tSt-J6-nYt" firstAttribute="top" secondItem="j0O-Ty-sKi" secondAttribute="top" id="gss-uz-I23"/>
+                            <constraint firstItem="tSt-J6-nYt" firstAttribute="top" secondItem="j0O-Ty-sKi" secondAttribute="top" constant="10" id="gss-uz-I23"/>
                             <constraint firstItem="tSt-J6-nYt" firstAttribute="leading" secondItem="j0O-Ty-sKi" secondAttribute="leading" constant="30" id="vpo-Qy-uC6"/>
                             <constraint firstItem="j0O-Ty-sKi" firstAttribute="trailing" secondItem="tSt-J6-nYt" secondAttribute="trailing" constant="30" id="wlN-hz-WtN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="apG-ub-eHu"/>
                     <connections>
                         <outlet property="searchMessage" destination="JTq-uD-Pd5" id="On2-vG-P69"/>
                         <outlet property="searchTextField" destination="Sts-H1-3JW" id="tdt-LU-qGr"/>
@@ -194,6 +195,24 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p8R-ys-cLn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="88.392857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mMA-xA-iGp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KwE-HM-RTx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="6fm-c6-vkw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WhI-Lp-i81" kind="relationship" relationship="rootViewController" id="Oc1-Qf-bdW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VgE-ya-kbP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
         </scene>

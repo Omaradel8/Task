@@ -28,13 +28,13 @@
 		0428DCFF265AA5E50097F66B /* Home+TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428DCFE265AA5E50097F66B /* Home+TableDelegate.swift */; };
 		044EBD652659AAF6004C0130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EBD642659AAF6004C0130 /* AppDelegate.swift */; };
 		044EBD672659AAF6004C0130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EBD662659AAF6004C0130 /* SceneDelegate.swift */; };
-		044EBD692659AAF6004C0130 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EBD682659AAF6004C0130 /* ViewController.swift */; };
-		044EBD6C2659AAF6004C0130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044EBD6A2659AAF6004C0130 /* Main.storyboard */; };
 		044EBD6E2659AAF9004C0130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044EBD6D2659AAF9004C0130 /* Assets.xcassets */; };
 		044EBD712659AAF9004C0130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044EBD6F2659AAF9004C0130 /* LaunchScreen.storyboard */; };
 		044EBD7D2659AB5B004C0130 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EBD7B2659AB5B004C0130 /* WebService.swift */; };
 		044EBD822659ABA0004C0130 /* RecipesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 044EBD802659ABA0004C0130 /* RecipesModel.xcdatamodeld */; };
 		044EBD862659ABFB004C0130 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EBD852659ABFB004C0130 /* CoreDataManager.swift */; };
+		049F2C85265B9C7F0009B824 /* Home+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F2C84265B9C7F0009B824 /* Home+TextFieldDelegate.swift */; };
+		049F2C8A265B9FE90009B824 /* Home+Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F2C89265B9FE90009B824 /* Home+Api.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,14 +60,14 @@
 		044EBD612659AAF6004C0130 /* iOSTaskForFoodRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTaskForFoodRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044EBD642659AAF6004C0130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044EBD662659AAF6004C0130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		044EBD682659AAF6004C0130 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		044EBD6B2659AAF6004C0130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		044EBD6D2659AAF9004C0130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044EBD702659AAF9004C0130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044EBD722659AAF9004C0130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044EBD7B2659AB5B004C0130 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		044EBD812659ABA0004C0130 /* RecipesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipesModel.xcdatamodel; sourceTree = "<group>"; };
 		044EBD852659ABFB004C0130 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		049F2C84265B9C7F0009B824 /* Home+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+TextFieldDelegate.swift"; sourceTree = "<group>"; };
+		049F2C89265B9FE90009B824 /* Home+Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Api.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +156,8 @@
 				0428DCE9265A94850097F66B /* TableCell */,
 				0428DCF3265A972B0097F66B /* HomeViewController.swift */,
 				0428DCFE265AA5E50097F66B /* Home+TableDelegate.swift */,
+				049F2C84265B9C7F0009B824 /* Home+TextFieldDelegate.swift */,
+				049F2C89265B9FE90009B824 /* Home+Api.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,8 +204,6 @@
 				0428DCCA265A8C7A0097F66B /* Extension */,
 				044EBD642659AAF6004C0130 /* AppDelegate.swift */,
 				044EBD662659AAF6004C0130 /* SceneDelegate.swift */,
-				044EBD682659AAF6004C0130 /* ViewController.swift */,
-				044EBD6A2659AAF6004C0130 /* Main.storyboard */,
 				044EBD6D2659AAF9004C0130 /* Assets.xcassets */,
 				044EBD6F2659AAF9004C0130 /* LaunchScreen.storyboard */,
 				044EBD722659AAF9004C0130 /* Info.plist */,
@@ -291,7 +291,6 @@
 				0428DCE3265A8C7A0097F66B /* Sofia Pro Bold Az.otf in Resources */,
 				044EBD6E2659AAF9004C0130 /* Assets.xcassets in Resources */,
 				0428DCE5265A8C7A0097F66B /* Sofia Pro Regular Az.otf in Resources */,
-				044EBD6C2659AAF6004C0130 /* Main.storyboard in Resources */,
 				0428DCE6265A8C7A0097F66B /* FibonSans-Regular.otf in Resources */,
 				0428DCC8265A88D00097F66B /* Home.storyboard in Resources */,
 			);
@@ -308,11 +307,12 @@
 				0428DCF9265A99160097F66B /* RecipesModel.swift in Sources */,
 				0428DCFF265AA5E50097F66B /* Home+TableDelegate.swift in Sources */,
 				0428DCDB265A8C7A0097F66B /* View.swift in Sources */,
+				049F2C8A265B9FE90009B824 /* Home+Api.swift in Sources */,
 				0428DCDE265A8C7A0097F66B /* UIView+Ext.swift in Sources */,
-				044EBD692659AAF6004C0130 /* ViewController.swift in Sources */,
 				0428DCDF265A8C7A0097F66B /* FoodLandBodyLabel.swift in Sources */,
 				0428DCF4265A972B0097F66B /* HomeViewController.swift in Sources */,
 				0428DCF0265A94DA0097F66B /* ItemCell.swift in Sources */,
+				049F2C85265B9C7F0009B824 /* Home+TextFieldDelegate.swift in Sources */,
 				0428DCDD265A8C7A0097F66B /* UIViewController+Ext.swift in Sources */,
 				0428DCE2265A8C7A0097F66B /* FoodLandAlertContainerView.swift in Sources */,
 				0428DCE1265A8C7A0097F66B /* FoodLandTitleLabel.swift in Sources */,
@@ -330,14 +330,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		044EBD6A2659AAF6004C0130 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				044EBD6B2659AAF6004C0130 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		044EBD6F2659AAF9004C0130 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

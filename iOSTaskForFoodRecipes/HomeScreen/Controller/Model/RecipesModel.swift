@@ -15,12 +15,15 @@ struct RecipesResultModel: Codable {
     var count: Int?
     var hits: [Hit]?
     
-    static func getRecipesResult(q: String, callBack: @escaping (Result<RecipesResultModel, NetworkError>) -> Void) {
+    static func getRecipesResult(q: String, from: Int, to: Int, callBack: @escaping (Result<RecipesResultModel, NetworkError>) -> Void) {
         let parameters: [URLQueryItem] = [
             URLQueryItem(name: "q", value: q),
             URLQueryItem(name: "app_id", value: app_id),
-            URLQueryItem(name: "app_key", value: app_key)
+            URLQueryItem(name: "app_key", value: app_key),
+            URLQueryItem(name: "from", value: "\(from)"),
+            URLQueryItem(name: "to", value: "\(to)")
         ]
+        
         WebService().load(url: URLs.Instance.getRecipes(), parameters: parameters, completion: callBack)
     }
 }
